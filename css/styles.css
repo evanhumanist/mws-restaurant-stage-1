@@ -27,11 +27,11 @@ li {
     color: #333;
 }
 a {
-    color: #0275d8;
+    color: #fff;
     text-decoration: none;
 }
 a:hover, a:focus {
-    color: #cccccc;
+    color: blue;
     text-decoration: none;
 }
 a img{
@@ -115,7 +115,7 @@ nav h1 a {
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-    color: #0275d8;
+    color: blue;
     text-decoration: none;
 }
 
