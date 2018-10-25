@@ -1,4 +1,20 @@
 /**
+ * Service worker registration.
+ */
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+
+/**
  * Common database helper functions.
  */
 class DBHelper {
@@ -9,7 +25,7 @@ class DBHelper {
      */
     static get DATABASE_URL() {
         const port = 8000; // Change this to your server port
-        return `http://aviserver1:${port}/data/restaurants.json`;
+        return `http://localhost:${port}/data/restaurants.json`;
     }
 
     /**
