@@ -1,8 +1,8 @@
-var staticCacheName = 'mwsrs1-static-v11';
+const STATIC_CACHE_NAME = 'mwsrs1-static-v12';
 
 self.addEventListener('install', function(event) {
     event.waitUntil(
-        caches.open(staticCacheName).then(function(cache) {
+        caches.open(STATIC_CACHE_NAME).then(function(cache) {
             return cache.addAll([
                 '/',
                 'css/styles.css',
@@ -64,7 +64,7 @@ self.addEventListener('activate', function(event) {
             return Promise.all(
                 cacheNames.filter(function(cacheName) {
                     return cacheName.startsWith('mwsrs1-') &&
-                        cacheName != staticCacheName;
+                        cacheName != STATIC_CACHE_NAME;
                 }).map(function(cacheName) {
                     return caches.delete(cacheName);
                 })
