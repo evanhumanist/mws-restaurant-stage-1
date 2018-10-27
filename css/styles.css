@@ -78,12 +78,12 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 nav {
     height: 80px;
     background-color: #252831;
-    text-align:center;
     margin: 0 auto;
 }
 .title-text {
     margin: auto;
     line-height: 80px;
+    text-align: center;
 }
 nav h1 a {
     color: #fff;

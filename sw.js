@@ -1,4 +1,4 @@
-const STATIC_CACHE_NAME = 'mwsrs1-static-v12';
+const STATIC_CACHE_NAME = 'mwsrs1-static-v13';
 
 self.addEventListener('install', function(event) {
     event.waitUntil(
